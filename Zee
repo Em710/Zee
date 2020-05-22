@@ -735,9 +735,9 @@ def pilih_super():
 		except:
 			pass
 		
-	p = ThreadPool(35)
+	p = ThreadPool(90)
 	p.map(main, id)
-	print""" \033[1;96m
+	print""" \033[1;94m
 
                   `.-://////:-.`
               .:+o+:-..````..-:+o+:.
