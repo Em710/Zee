@@ -46,6 +46,13 @@ def cetak(x):
     x += '\033[0m'
     x = x.replace('!0','\033[0m')
     sys.stdout.write(x+'\n')
+
+
+def Mengetik(z):
+    for e in z + '\n':
+        sys.stdout.write(e)
+        sys.stdout.flush()
+        time.sleep(0.01)
 	
 
 def jalan(z):
