@@ -11,7 +11,7 @@ except ImportError:
     os.system('pip2 install requests')
     os.system('pip2 install mechanize')
     time.sleep(1)
-    os.system('python2 Zee')
+    os.system('python2 Zee.zx')
 
 
 reload(sys)
