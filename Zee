@@ -11,7 +11,7 @@ except ImportError:
     os.system('pip2 install requests')
     os.system('pip2 install mechanize')
     time.sleep(1)
-    os.system('python2 Zee1')
+    os.system('python2 Zee')
 
 
 reload(sys)
@@ -22,6 +22,7 @@ br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(),max_time=1)
 br.addheaders = [('User-Agent', 'Mozilla/5.0 (Linux; Android 8.1.0; Chrome/79.0.3945.116) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.116 Mobile Safari/537.36')]
 br.addheaders = [('User-Agent', 'Opera/9.80 (Android; Opera Mini/32.0.2254/85. U; id) Presto/2.12.423 Version/12.16')]
 br.addheaders = [('User-Agent', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.21 (KHTML, like Gecko) wpif Safari/537.21')]
+br.addheaders = [('User-Agent', 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_0_2 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) Mobile/14A456 [FBAN/FBIOS;FBAV/66.0.0.42.70;FBBV/40764466;FBRV/0;FBDV/iPhone8,1;FBMD/iPhone;FBSN/iOS;FBSV/10.0.2;FBSS/2;FBCR/Verizon;FBID/phone;FBLC/en_US;FBOP/5]')]
 
 def loading():
     titik = [
@@ -232,11 +233,11 @@ def menu():
 	print "\033[1;96m[\033[1;97m✓\033[1;96m]\033[1;93m Name \033[1;91m: \033[1;92m"+nama+"\033[1;97m                  "
 	print "\033[1;96m[\033[1;97m✓\033[1;96m]\033[1;93m ID   \033[1;91m: \033[1;92m"+id+"\x1b[1;97m              "
 	print 42*"\033[1;96m="
-	print "[÷]1 Crack Facebook"
-	print "[÷]2 See Groups List"
-	print "[÷]3 Information Facebook"
-	print "[÷]4 Yahoo Clone"
-	print "[÷]5 Exit The Program"
+	print "[1] Crack Facebook"
+	print "[2] See Groups List"
+	print "[3] Information Facebook"
+	print "[4] Yahoo Clone"
+	print "[0] Exit The Program"
 	pilih()
 
 
@@ -276,11 +277,11 @@ def super():
 	os.system('clear')
 	print logo
 	print 42*"\033[1;96m="
-	print "[÷]1 Crack With Friendlist"
-	print "[÷]2 Crack With Public ID"
-	print "[÷]3 Crack With Group Member"
-	print "[÷]4 Crack With File"
-	print "[÷]0 Back"
+	print "[1] Crack With Friendlist"
+	print "[2] Crack With Public ID"
+	print "[3] Crack With Group Member"
+	print "[4] Crack With File"
+	print "[0] Back"
 	pilih_super()
 
 def pilih_super():
