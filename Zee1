@@ -11,7 +11,7 @@ except ImportError:
     os.system('pip2 install requests')
     os.system('pip2 install mechanize')
     time.sleep(1)
-    os.system('python2 Zee2')
+    os.system('python2 Zee1')
 
 
 reload(sys)
@@ -21,7 +21,6 @@ br.set_handle_robots(False)
 br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(),max_time=1)
 br.addheaders = [('User-Agent', 'Mozilla/5.0 (Linux; Android 8.1.0; Chrome/79.0.3945.116) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.116 Mobile Safari/537.36')]
 br.addheaders = [('User-Agent', 'Opera/9.80 (Android; Opera Mini/32.0.2254/85. U; id) Presto/2.12.423 Version/12.16')]
-br.addheaders = [('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.21 (KHTML, like Gecko) wpif Safari/537.21')]
 
 def loading():
     titik = [
