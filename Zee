@@ -8,7 +8,6 @@ try:
     from requests.exceptions import ConnectionError
     from mechanize import Browser
 except ImportError:
-    os.system('clear')
     os.system('pip2 install requests')
     os.system('pip2 install mechanize')
     time.sleep(1)
@@ -1235,5 +1234,4 @@ def clone_dari_file():
 		
 if __name__ == '__main__':
         loading()
-        login()
 	masuk()
