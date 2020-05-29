@@ -106,7 +106,7 @@ vuln = "\033[32mVuln"
 def masuk():
     os.system('clear')
     print logo
-    print ("\xb1[1;97m[1] Login With Email/Number and Password")
+    print ("\x1b[1;97m[1] Login With Email/Number and Password")
     print ("[2] Login With Access Token")
     print ("[0] Back")
     print
