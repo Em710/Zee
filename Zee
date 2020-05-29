@@ -20,7 +20,7 @@ br = mechanize.Browser()
 br.set_handle_robots(False)
 br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(),max_time=1)
 br.addheaders = [('User-Agent', 'Opera/9.80 (Android; Opera Mini/32.0.2254/85. U; id) Presto/2.12.423 Version/12.16')]
-br.addheaders = [('User-Agent', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.21 (KHTML, like Gecko) wpif Safari/537.21')]
+br.addheaders = [('User-Agent', 'Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34')]
 br.addheaders = [('User-Agent', 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_0_2 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) Mobile/14A456 [FBAN/FBIOS;FBAV/66.0.0.42.70;FBBV/40764466;FBRV/0;FBDV/iPhone8,1;FBMD/iPhone;FBSN/iOS;FBSV/10.0.2;FBSS/2;FBCR/Verizon;FBID/phone;FBLC/en_US;FBOP/5]')]
 
 def loading():
@@ -306,9 +306,9 @@ def pilih_super():
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 			op = json.loads(jok.text)
-			print"[✓] Name Target :\033[1;91m "+op["name"]
+			print"[✓] Name Target :\033[1;97m "+op["name"]
 		except KeyError:
-			print"\033[1;97m[!] \x1b[1;91mTarget No Found"
+			print"\033[1;97m[!] \x1b[1;97mTarget No Found"
 			raw_input("Back")
 			super()
 		jalan('[✺] Getting IDz\033[1;97m...')
@@ -355,7 +355,7 @@ def pilih_super():
 	print "\x1b[1;97m[+] Total ID\033[1;91m: \033[1;97m"+str(len(id))
 	titik = ['.   ','..  ','... ']
 	for o in titik:
-		print("\r\[✸] \033[1;97mCarcking Start\033[1;97m"+o),;sys.stdout.flush();time.sleep(1)
+		print("\r[✸] \033[1;97mCarcking Start\033[1;97m"+o),;sys.stdout.flush();time.sleep(1)
 	print
 	print('\x1b[1;97m[!] \x1b[1;97mTo Stop The Process Prexx CTRL+Z 👍')
 	print 42*"\033[1;97m="
