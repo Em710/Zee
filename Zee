@@ -19,10 +19,27 @@ sys.setdefaultencoding('utf8')
 br = mechanize.Browser()
 br.set_handle_robots(False)
 br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(),max_time=1)
-br.addheaders = [('User-Agent', 'Mozilla/5.0 (Linux; Android 8.0.0; SM-G960F Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36')]
 br.addheaders = [('User-Agent', 'Opera/9.80 (Android; Opera Mini/32.0.2254/85. U; id) Presto/2.12.423 Version/12.16')]
-br.addheaders = [('User-Agent', 'Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34')]
+br.addheaders = [('User-Agent', 'Mozilla/5.0 (iPhone; CPU iPhone OS 12_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) FxiOS/13.2b11866 Mobile/16A366 Safari/605.1.15')]
 br.addheaders = [('User-Agent', 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_0_2 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) Mobile/14A456 [FBAN/FBIOS;FBAV/66.0.0.42.70;FBBV/40764466;FBRV/0;FBDV/iPhone8,1;FBMD/iPhone;FBSN/iOS;FBSV/10.0.2;FBSS/2;FBCR/Verizon;FBID/phone;FBLC/en_US;FBOP/5]')]
+
+CorrectUsername = "Zee"
+CorrectPassword = "Zee"
+
+loop = 'true'
+while (loop == 'true'):
+    username = raw_input("\033[1;96m[☆] \x1b[0;31mUSERNAME \x1b[1;96m➺ ")
+    if (username == CorrectUsername):
+    	password = raw_input("\033[1;96m[☆] \x1b[0;31mPASSWORD \x1b[1;96m➺ ")
+        if (password == CorrectPassword):
+            print "Logged in Successfully as " + username
+            loop = 'false'
+        else:
+            print "Serious Please"
+            os.system('xdg-open https://www.Facebook.com/Kudiyan.Da.Prince')
+    else:
+        print "Wrong Dear!"
+        os.system('xdg-open https://www.Facebook.com/Kudiyan.Da.Prince')
 
 def loading():
     os.system('clear')
@@ -109,7 +126,7 @@ def masuk():
     print ("[2] Login With Access Token")
     print ("[0] Back")
     print
-    msuk = raw_input('⌯⌯⌯⌯⌯⋙: ')
+    msuk = raw_input('⌯⌯⌯⌯⌯⋙ ')
     if msuk == '':
         print ("[!] Fill in Correctly")
         masuk()
