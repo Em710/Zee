@@ -6,10 +6,6 @@ import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,re
 from multiprocessing.pool import ThreadPool
 from requests.exceptions import ConnectionError
 from mechanize import Browser
-    os.system('pip2 install requests')
-    os.system('pip2 install mechanize')
-    time.sleep(1)
-    os.system('python2 Zee')
  
  
 reload(sys)
