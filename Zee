@@ -7,8 +7,6 @@ from multiprocessing.pool import ThreadPool
 from requests.exceptions import ConnectionError
 from mechanize import Browser
 reload(sys)
-    os.system('pip2 install requests')
-    os.system('pip2 install mechanize')
 sys.setdefaultencoding('utf8')
  
  
@@ -227,7 +225,7 @@ def menu():
 	print 42*"\033[1;97m═"
 	print "[1] Crack With Facebook"
 	print "[2] Crack With ZeDD"
-	print "[3] Power With Fast"
+	print "[3] Crack With Fast"
 	print "[4] Fuck You Haterz?"
 	print "[0] Exit The Program"
 	pilih()
